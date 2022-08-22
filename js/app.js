@@ -1,5 +1,8 @@
 let player=[];
 
+// function 1 
+// create element
+
 function addtoPlayerName(element){
 const getPlayer= element.parentNode.children[0].innerText;
 const playerName =document.getElementById('player-name')
@@ -9,8 +12,11 @@ playerName.appendChild(li);
 player.push(getPlayer)
 
 return player;
-// console.log(player.length)
+
 }
+
+// player per price part 
+
 document.getElementById('cost-button').addEventListener('click',function(){
     const playerNumber= player.length
    
@@ -25,24 +31,18 @@ document.getElementById('cost-button').addEventListener('click',function(){
    
 })
 
-function coachAndManagerCost(element){
-    const CoachmanagerCost = document.getElementById(element);
-const CoachmanagerCostValue = CoachmanagerCost. value ;
-const CoachmanagerCostStr = parseInt(CoachmanagerCostValue);
-CoachmanagerCost. value='';
-return CoachmanagerCostStr;
-}
-
+// left part 
 document.getElementById('calculate-total').addEventListener('click',function(){
 const coachCost = coachAndManagerCost('coach-cost');
 
 const managerCost =coachAndManagerCost('manager-cost')
 
 const expenseTotal=document.getElementById('expense-total');
-const expenseTotalValue= expenseTotal.innerText;
-const total =expenseTotalValue-(coachCost+managerCost) 
 
+const expenseTotalValue= expenseTotal.innerText;
+const expenseTotalParse= parseInt(expenseTotalValue)
+const total =expenseTotalParse+coachCost+managerCost;
 const totalLast = document.getElementById('total');
-totalLast.innerText= total;
+totalLast.innerText=total
 })
 

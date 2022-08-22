@@ -13,8 +13,7 @@ return player;
 }
 document.getElementById('cost-button').addEventListener('click',function(){
     const playerNumber= player.length
-   console.log(playerNumber);
-
+   
    const playerPrice= document.getElementById('player-price');
    const playerPriceValue= playerPrice.value;
    const playerPriceStr= parseInt(playerPriceValue);
@@ -22,11 +21,28 @@ document.getElementById('cost-button').addEventListener('click',function(){
 
    const expenseTotal=document.getElementById('expense-total');
    expenseTotal.innerText=totalCost;   
+   playerPrice.value='';
+   
 })
 
-function coachAndManagerCost()
+function coachAndManagerCost(element){
+    const CoachmanagerCost = document.getElementById(element);
+const CoachmanagerCostValue = CoachmanagerCost. value ;
+const CoachmanagerCostStr = parseInt(CoachmanagerCostValue);
+CoachmanagerCost. value='';
+return CoachmanagerCostStr;
+}
 
 document.getElementById('calculate-total').addEventListener('click',function(){
+const coachCost = coachAndManagerCost('coach-cost');
 
+const managerCost =coachAndManagerCost('manager-cost')
+
+const expenseTotal=document.getElementById('expense-total');
+const expenseTotalValue= expenseTotal.innerText;
+const total =expenseTotalValue-(coachCost+managerCost) 
+
+const totalLast = document.getElementById('total');
+totalLast.innerText= total;
 })
 

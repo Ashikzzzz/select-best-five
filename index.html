@@ -21,7 +21,8 @@
     </div>
     </header>
     <!-- header end  -->
-<main class="container bg-dark mt-5" >
+<main class="container bg-dark mt-5 p-5" >
+    <!-- card start  -->
     <div class="row">
         <div class="col-md-9">
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -30,7 +31,7 @@
                     <img src="img/messi.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Messi</h5>
-                      <button class="btn btn-primary" >Select</button>
+                      <button class="btn btn-primary" onclick="addtoPlayerName(this)" >Select</button>
                     </div>
                   </div>
                 </div>
@@ -39,7 +40,7 @@
                     <img src="img/mbappe.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">M-Bappe</h5>
-                      <button class="btn btn-primary" >Select</button>
+                      <button class="btn btn-primary" onclick="addtoPlayerName(this)">Select</button>
                     </div>
                   </div>
                 </div>
@@ -48,7 +49,7 @@
                     <img src="img/neymar.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Neymar Jr.</h5>
-                     <button class="btn btn-primary" >Select</button>
+                     <button class="btn btn-primary" onclick="addtoPlayerName(this)">Select</button>
                     </div>
                   </div>
                 </div>
@@ -57,7 +58,7 @@
                       <img src="img/d-maria.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">D-maria</h5>
-                       <button class="btn btn-primary" >Select</button>
+                       <button class="btn btn-primary" onclick="addtoPlayerName(this)">Select</button>
                       </div>
                     </div>
                   </div>
@@ -66,7 +67,7 @@
                       <img src="img/ramos.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Ramos</h5>
-                       <button class="btn btn-primary" >Select</button>
+                       <button class="btn btn-primary" onclick="addtoPlayerName(this)">Select</button>
                       </div>
                     </div>
                   </div>
@@ -75,39 +76,39 @@
                       <img src="img/Vítor Machado.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Machado</h5>
-                       <button class="btn btn-primary" >Select</button>
+                       <button class="btn btn-primary" onclick="addtoPlayerName(this)">Select</button>
                       </div>
                     </div>
                   </div>
               </div>
         </div>
+        <!-- card end -->
+
+        <!-- selected part start  -->
           <div class="col-md-3">
             <h3 class="text-clr text-center">Selected player</h3>
-        <ul class="text-clr list-group list-group-vertical ms-5 mt-5">
-            <li>Messi</li>
-            <li>Neymar</li>
-            <li>Mbappe</li>
-            <li>Sanchez</li>
-            <li>Ramos</li>
-        </ul>
+        <ol id="player-name" class="text-clr list-group list-group-vertical ms-5 mt-5">
+         
+        </ol>
+           <!-- selected part end  -->
 
+            <!-- calculation start  -->
         <h1 class="text-clr mt-4 text-center">Budgets</h1>
         <p class="text-white">Per player:</p>
         <div class="input-group flex-nowrap">
-            <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+            <input id="player-price" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
           </div>
-          <button class="btn btn-primary mt-3">Calculate</button>
-          <p class="text-white">Player Expenses: $<span>000</span>  </p>
+          <button id="cost-button" class="btn btn-primary mt-3">Calculate</button>
+          <h2 class="text-white">Player Expenses: $<span id="expense-total" >000</span>  </h2>
           <p class="text-white">Manager:  <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"></p>
           <p class="text-white">Coach:  <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"></p>
 
-          <button class="btn btn-primary">Calculate Total</button>
+          <button id="calculate-total" class="btn btn-primary">Calculate Total</button>
          <h3 class="text-clr">Total: $<span>000</span></h3>
           </div>
-         
-         
         </div>
+        <!-- calculation end  -->
 </main>
-
+<script src="js/app.js"></script>
 </body>
 </html>

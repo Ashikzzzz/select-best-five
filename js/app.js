@@ -9,8 +9,7 @@ const playerName =document.getElementById('player-name')
 const li =document.createElement('li')
 li.innerText=getPlayer;
 playerName.appendChild(li);
-player.push(getPlayer)
-
+player.push(getPlayer) 
 return player;
 
 }

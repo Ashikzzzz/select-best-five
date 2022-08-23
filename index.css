@@ -4,6 +4,12 @@
 .img-size{
     height: 400px;
 }
+.club-clr{
+    color: gold;
+}
 .img-size2{
     width: 450px;
+}
+.ftr-cls{
+    border-bottom: 2px solid gray;
 }

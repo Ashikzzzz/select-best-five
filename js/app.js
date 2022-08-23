@@ -3,17 +3,24 @@ let player=[];
 // function 1 
 // create element
 
+
 function addtoPlayerName(element){
 const getPlayer= element.parentNode.children[0].innerText;
 const playerName =document.getElementById('player-name')
-const li =document.createElement('li')
-li.innerText=getPlayer;
-playerName.appendChild(li);
-player.push(getPlayer) 
-return player;
+player.push(getPlayer)
 
+if(player.length<6){
+    const li =document.createElement('li')
+    li.innerText=getPlayer;
+    element.disabled=true;
+    playerName.appendChild(li);      
 }
-
+else{
+    
+    alert('instructor says, can"t add more then five player')
+} 
+return player;
+}
 // player per price part 
 
 document.getElementById('cost-button').addEventListener('click',function(){

@@ -31,7 +31,7 @@
                     <img src="img/messi.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Messi</h5>
-                      <button class="btn btn-primary" onclick="addtoPlayerName(this)" >Select</button>
+                      <button id="btn1" class="btn btn-primary" onclick="addtoPlayerName(this)" >Select</button>
                     </div>
                   </div>
                 </div>
@@ -98,12 +98,12 @@
         <div class="input-group flex-nowrap">
             <input id="player-price" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
           </div>
-          <button id="cost-button" class="btn btn-primary mt-3">Calculate</button>
+          <button id="cost-button" class="btn btn-info mt-3">Calculate</button>
           <h2 class="text-white">Player Expenses: $<span id="expense-total" >000</span>  </h2>
           <p class="text-white">Manager:<input id="manager-cost" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"></p>
           <p class="text-white">Coach:<input id="coach-cost" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"></p>
 
-          <button id="calculate-total" class="btn btn-primary">Calculate Total</button>
+          <button id="calculate-total" class="btn btn-info">Calculate Total</button>
          <h3 class="text-clr">Total: $<span id="total">000</span></h3>
           </div>
         </div>

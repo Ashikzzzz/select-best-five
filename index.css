@@ -13,3 +13,6 @@
 .ftr-cls{
     border-bottom: 2px solid gray;
 }
+.diseable{
+    background-color: azure;
+}
